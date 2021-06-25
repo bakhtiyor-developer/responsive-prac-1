@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+.box-list {
+    width: 1200px;
+    padding: 0px 25px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 100px auto;
+}
+
+.box-item {
+    width: 250px;
+    height: 250px;
+    background-color: black;
+}
+
+.box-item:not(:first-child) {
+    margin-left: 50px;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .box-list {
+        max-width: 975px;
+    }
+
+    .box-item {
+        background-color: firebrick;
+    }
+    
+    .box-item:not(:first-child) {
+        margin-left: 75px;
+    }
+
+    .box-item:nth-child(4n) {
+        margin-left: 0;
+        margin-top: 75px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .box-list {
+        width: 650px;
+    }
+
+    .box-item {
+        background-color: green;
+    }
+    
+    .box-item:not(:first-child) {
+        margin-left: 100px;
+    }
+
+    .box-item:nth-child(3n) {
+        margin-left: 0;
+        margin-top: 100px;
+    }
+
+    .box-item:last-child {
+        margin-top: 100px;
+        margin-left: 100px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .box-list {
+        max-width: 100%;
+    }
+
+    .box-item {
+        background-color: orange;
+        width: 100%;
+        height: 300px;
+    }
+    
+    .box-item:not(:first-child) {
+        margin: 0;
+        margin-top: 50px;
+    }
+}
